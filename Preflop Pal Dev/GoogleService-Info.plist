@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBLAVYDp9L7tewl9xk-s8TqhmuRvl_CxTk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>374874049326</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ryanluo.Preflop-Pal</string>
+	<key>PROJECT_ID</key>
+	<string>preflop-pal</string>
+	<key>STORAGE_BUCKET</key>
+	<string>preflop-pal.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:374874049326:ios:89b612408293db51cb88bf</string>
+	<key>DATABASE_URL</key>
+	<string>https://preflop-pal-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

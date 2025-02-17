@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		019C6B5D2D5ABB20001DBF85 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 019C6B5C2D5ABB20001DBF85 /* FirebaseAuth */; };
+		019C6B5F2D5ABB20001DBF85 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 019C6B5E2D5ABB20001DBF85 /* FirebaseCore */; };
+		019C6D072D5E6E85001DBF85 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 019C6D062D5E6E85001DBF85 /* FirebaseDatabase */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		019C6B292D5AACA5001DBF85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 019C6B0A2D5AACA3001DBF85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 019C6B112D5AACA3001DBF85;
+			remoteInfo = "Preflop Pal Dev";
+		};
+		019C6B332D5AACA5001DBF85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 019C6B0A2D5AACA3001DBF85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 019C6B112D5AACA3001DBF85;
+			remoteInfo = "Preflop Pal Dev";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		019C6B122D5AACA3001DBF85 /* Preflop Pal Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Preflop Pal Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019C6B282D5AACA5001DBF85 /* Preflop Pal DevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Preflop Pal DevTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019C6B322D5AACA5001DBF85 /* Preflop Pal DevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Preflop Pal DevUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		019C6B3A2D5AACA5001DBF85 /* Exceptions for "Preflop Pal Dev" folder in "Preflop Pal Dev" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 019C6B112D5AACA3001DBF85 /* Preflop Pal Dev */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		019C6B142D5AACA3001DBF85 /* Preflop Pal Dev */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				019C6B3A2D5AACA5001DBF85 /* Exceptions for "Preflop Pal Dev" folder in "Preflop Pal Dev" target */,
+			);
+			path = "Preflop Pal Dev";
+			sourceTree = "<group>";
+		};
+		019C6B2B2D5AACA5001DBF85 /* Preflop Pal DevTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Preflop Pal DevTests";
+			sourceTree = "<group>";
+		};
+		019C6B352D5AACA5001DBF85 /* Preflop Pal DevUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Preflop Pal DevUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		019C6B0F2D5AACA3001DBF85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019C6D072D5E6E85001DBF85 /* FirebaseDatabase in Frameworks */,
+				019C6B5F2D5ABB20001DBF85 /* FirebaseCore in Frameworks */,
+				019C6B5D2D5ABB20001DBF85 /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019C6B252D5AACA5001DBF85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019C6B2F2D5AACA5001DBF85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		019C6B092D5AACA3001DBF85 = {
+			isa = PBXGroup;
+			children = (
+				019C6B142D5AACA3001DBF85 /* Preflop Pal Dev */,
+				019C6B2B2D5AACA5001DBF85 /* Preflop Pal DevTests */,
+				019C6B352D5AACA5001DBF85 /* Preflop Pal DevUITests */,
+				019C6D052D5E6E85001DBF85 /* Frameworks */,
+				019C6B132D5AACA3001DBF85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		019C6B132D5AACA3001DBF85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				019C6B122D5AACA3001DBF85 /* Preflop Pal Dev.app */,
+				019C6B282D5AACA5001DBF85 /* Preflop Pal DevTests.xctest */,
+				019C6B322D5AACA5001DBF85 /* Preflop Pal DevUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		019C6D052D5E6E85001DBF85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		019C6B112D5AACA3001DBF85 /* Preflop Pal Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019C6B3B2D5AACA5001DBF85 /* Build configuration list for PBXNativeTarget "Preflop Pal Dev" */;
+			buildPhases = (
+				019C6B0E2D5AACA3001DBF85 /* Sources */,
+				019C6B0F2D5AACA3001DBF85 /* Frameworks */,
+				019C6B102D5AACA3001DBF85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				019C6B142D5AACA3001DBF85 /* Preflop Pal Dev */,
+			);
+			name = "Preflop Pal Dev";
+			packageProductDependencies = (
+				019C6B5C2D5ABB20001DBF85 /* FirebaseAuth */,
+				019C6B5E2D5ABB20001DBF85 /* FirebaseCore */,
+				019C6D062D5E6E85001DBF85 /* FirebaseDatabase */,
+			);
+			productName = "Preflop Pal Dev";
+			productReference = 019C6B122D5AACA3001DBF85 /* Preflop Pal Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		019C6B272D5AACA5001DBF85 /* Preflop Pal DevTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019C6B402D5AACA5001DBF85 /* Build configuration list for PBXNativeTarget "Preflop Pal DevTests" */;
+			buildPhases = (
+				019C6B242D5AACA5001DBF85 /* Sources */,
+				019C6B252D5AACA5001DBF85 /* Frameworks */,
+				019C6B262D5AACA5001DBF85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				019C6B2A2D5AACA5001DBF85 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				019C6B2B2D5AACA5001DBF85 /* Preflop Pal DevTests */,
+			);
+			name = "Preflop Pal DevTests";
+			packageProductDependencies = (
+			);
+			productName = "Preflop Pal DevTests";
+			productReference = 019C6B282D5AACA5001DBF85 /* Preflop Pal DevTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		019C6B312D5AACA5001DBF85 /* Preflop Pal DevUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019C6B432D5AACA5001DBF85 /* Build configuration list for PBXNativeTarget "Preflop Pal DevUITests" */;
+			buildPhases = (
+				019C6B2E2D5AACA5001DBF85 /* Sources */,
+				019C6B2F2D5AACA5001DBF85 /* Frameworks */,
+				019C6B302D5AACA5001DBF85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				019C6B342D5AACA5001DBF85 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				019C6B352D5AACA5001DBF85 /* Preflop Pal DevUITests */,
+			);
+			name = "Preflop Pal DevUITests";
+			packageProductDependencies = (
+			);
+			productName = "Preflop Pal DevUITests";
+			productReference = 019C6B322D5AACA5001DBF85 /* Preflop Pal DevUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		019C6B0A2D5AACA3001DBF85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					019C6B112D5AACA3001DBF85 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					019C6B272D5AACA5001DBF85 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 019C6B112D5AACA3001DBF85;
+					};
+					019C6B312D5AACA5001DBF85 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 019C6B112D5AACA3001DBF85;
+					};
+				};
+			};
+			buildConfigurationList = 019C6B0D2D5AACA3001DBF85 /* Build configuration list for PBXProject "Preflop Pal Dev" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 019C6B092D5AACA3001DBF85;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				019C6B5B2D5ABB20001DBF85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 019C6B132D5AACA3001DBF85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				019C6B112D5AACA3001DBF85 /* Preflop Pal Dev */,
+				019C6B272D5AACA5001DBF85 /* Preflop Pal DevTests */,
+				019C6B312D5AACA5001DBF85 /* Preflop Pal DevUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		019C6B102D5AACA3001DBF85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019C6B262D5AACA5001DBF85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019C6B302D5AACA5001DBF85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		019C6B0E2D5AACA3001DBF85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019C6B242D5AACA5001DBF85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019C6B2E2D5AACA5001DBF85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		019C6B2A2D5AACA5001DBF85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 019C6B112D5AACA3001DBF85 /* Preflop Pal Dev */;
+			targetProxy = 019C6B292D5AACA5001DBF85 /* PBXContainerItemProxy */;
+		};
+		019C6B342D5AACA5001DBF85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 019C6B112D5AACA3001DBF85 /* Preflop Pal Dev */;
+			targetProxy = 019C6B332D5AACA5001DBF85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		019C6B3C2D5AACA5001DBF85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4N585SN25;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Preflop Pal Dev/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Preflop Pal";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanluo.Preflop-Pal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		019C6B3D2D5AACA5001DBF85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4N585SN25;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Preflop Pal Dev/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Preflop Pal";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanluo.Preflop-Pal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		019C6B3E2D5AACA5001DBF85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		019C6B3F2D5AACA5001DBF85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		019C6B412D5AACA5001DBF85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37MNQPECQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanluo.Preflop-Pal-DevTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Preflop Pal Dev.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Preflop Pal Dev";
+			};
+			name = Debug;
+		};
+		019C6B422D5AACA5001DBF85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37MNQPECQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanluo.Preflop-Pal-DevTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Preflop Pal Dev.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Preflop Pal Dev";
+			};
+			name = Release;
+		};
+		019C6B442D5AACA5001DBF85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37MNQPECQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanluo.Preflop-Pal-DevUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Preflop Pal Dev";
+			};
+			name = Debug;
+		};
+		019C6B452D5AACA5001DBF85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37MNQPECQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ryanluo.Preflop-Pal-DevUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Preflop Pal Dev";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		019C6B0D2D5AACA3001DBF85 /* Build configuration list for PBXProject "Preflop Pal Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019C6B3E2D5AACA5001DBF85 /* Debug */,
+				019C6B3F2D5AACA5001DBF85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019C6B3B2D5AACA5001DBF85 /* Build configuration list for PBXNativeTarget "Preflop Pal Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019C6B3C2D5AACA5001DBF85 /* Debug */,
+				019C6B3D2D5AACA5001DBF85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019C6B402D5AACA5001DBF85 /* Build configuration list for PBXNativeTarget "Preflop Pal DevTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019C6B412D5AACA5001DBF85 /* Debug */,
+				019C6B422D5AACA5001DBF85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019C6B432D5AACA5001DBF85 /* Build configuration list for PBXNativeTarget "Preflop Pal DevUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019C6B442D5AACA5001DBF85 /* Debug */,
+				019C6B452D5AACA5001DBF85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		019C6B5B2D5ABB20001DBF85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		019C6B5C2D5ABB20001DBF85 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 019C6B5B2D5ABB20001DBF85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		019C6B5E2D5ABB20001DBF85 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 019C6B5B2D5ABB20001DBF85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		019C6D062D5E6E85001DBF85 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 019C6B5B2D5ABB20001DBF85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 019C6B0A2D5AACA3001DBF85 /* Project object */;
+}
