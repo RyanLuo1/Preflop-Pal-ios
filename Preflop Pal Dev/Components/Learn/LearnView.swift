@@ -80,6 +80,7 @@ struct LearnView: View {
         .frame(height: 48)
         .foregroundStyle(.white)
         .background(Colors.tintColorPrimary)
+        .preferredColorScheme(.light)
     }
     
     var content: some View {

@@ -23,15 +23,17 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let email = UserDefaults.standard.string(forKey: "email"), let password = UserDefaults.standard.string(forKey: "password") {
+        if let email = UserDefaults.standard.string(forKey: "email"),
+           let password = UserDefaults.standard.string(forKey: "password") {
             AuthenticationService.shared.login(email: email, password: password) { result in
-                guard let result else {
-                    return
+                switch result {
+                case .success(let uid):
+                    self.uid = uid
+                    self.presentMainView()
+                case .failure(let error):
+                    // Handle auto-login failure by showing authentication screen
+                    self.presentAuthentication()
                 }
-                
-                self.uid = result
-                
-                self.presentMainView()
             }
         } else {
             presentAuthentication()
@@ -59,9 +61,6 @@ class ViewController: UIViewController {
             case .accountCreated:
                 let loginHost = UIHostingController(rootView: LoginView(vm: vm))
                 authenticationNavigation.pushViewController(loginHost, animated: true)
-                let alert = UIAlertController(title: "Please check your email for verification.", message: nil, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Okay", style: .default))
-                loginHost.present(alert, animated: true)
             }
         })
         let view = AuthenticationView(vm: vm)
@@ -81,6 +80,7 @@ class ViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Try Again", style: .default) { _ in
                     self.authenticateForAccess()
                 })
+                self.present(alert, animated: true)
             }
         }
     }
@@ -89,23 +89,17 @@ class ViewController: UIViewController {
         let context = LAContext()
         var error: NSError?
 
-        // check whether biometric authentication is possible
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            // it's possible, so go ahead and use it
             let reason = "Unlock to access PreFlop Pal."
 
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                // authentication has now completed
                 if success {
-                    // authenticated successfully
                     completion(true)
                 } else {
-                    // there was a problem
                     completion(false)
                 }
             }
         } else {
-            // no biometrics
             completion(true)
         }
     }
@@ -125,6 +119,4 @@ class ViewController: UIViewController {
         host.navigationController?.setNavigationBarHidden(true, animated: false)
         self.present(mainNavigation, animated: true)
     }
-
 }
-

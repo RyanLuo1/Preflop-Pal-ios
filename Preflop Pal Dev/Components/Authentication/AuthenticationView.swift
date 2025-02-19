@@ -1,10 +1,3 @@
-//
-//  AuthenticationView.swift
-//  Preflop Pal Dev
-//
-//  Created by Ryan Luo on 2/10/25.
-//
-
 import SwiftUI
 
 enum AuthenticationViewAction {
@@ -30,46 +23,50 @@ class AuthenticationViewModel: ObservableObject {
     func login(_ email: String, _ password: String) {
         if isLoading { return }
         self.isLoading = true
-        AuthenticationService.shared.login(email: email, password: password) { [weak self] uid in
+        AuthenticationService.shared.login(email: email, password: password) { [weak self] result in
             guard let self else { return }
             self.isLoading = false
             
-            guard let uid else {
-                self.errorMessage = "Could not login with those credentials."
-                return
+            switch result {
+            case .success(let uid):
+                if rememberMe {
+                    UserDefaults.standard.set(email, forKey: "email")
+                    UserDefaults.standard.set(password, forKey: "password")
+                } else {
+                    UserDefaults.standard.set(nil, forKey: "email")
+                    UserDefaults.standard.set(nil, forKey: "password")
+                }
+                self.action(.login(uid))
+            case .failure(let error):
+                self.errorMessage = error.message
             }
-            
-            if rememberMe {
-                UserDefaults.standard.set(email, forKey: "email")
-                UserDefaults.standard.set(password, forKey: "password")
-            } else {
-                UserDefaults.standard.set(nil, forKey: "email")
-                UserDefaults.standard.set(nil, forKey: "password")
-            }
-            
-            self.action(.login(uid))
         }
     }
     
     func createAccount(_ email: String, _ password: String) {
         if isLoading { return }
+        
+        guard password == passwordConfirm else {
+            errorMessage = "Passwords do not match"
+            return
+        }
+        
         self.isLoading = true
-        AuthenticationService.shared.signUp(email: email, password: password) { [weak self] uid in
+        AuthenticationService.shared.signUp(email: email, password: password) { [weak self] result in
             guard let self else { return }
-            guard let uid else {
-                self.isLoading = false
-                self.errorMessage = "Could not sign up with those credentials."
-                return
+            self.isLoading = false
+            
+            switch result {
+            case .success:
+                self.action(.accountCreated)
+            case .failure(let error):
+                self.errorMessage = error.message
             }
-            isLoading = false
-            //login(email, password) // Auto login after account creation
-            self.action(.accountCreated)
         }
     }
 }
 
 struct AuthenticationView: View {
-    
     @StateObject var vm: AuthenticationViewModel
     @State var errorAlertIsPresented: Bool = false
     
@@ -124,18 +121,19 @@ struct AuthenticationView: View {
         }
         .alert(vm.errorMessage ?? "", isPresented: $errorAlertIsPresented, actions: {
             Button {
-                // Do nothing
                 vm.errorMessage = nil
             } label: {
                 Text("Okay")
             }
         })
         .preferredColorScheme(.light)
+        .colorScheme(.light)
     }
 }
 
 struct LoginView: View {
     @StateObject var vm: AuthenticationViewModel
+    @State private var showPassword: Bool = false
     
     var body: some View {
         VStack(spacing: 40) {
@@ -154,22 +152,34 @@ struct LoginView: View {
                     .padding(12)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(style: StrokeStyle(lineWidth: 1)
-                                   )
+                            .stroke(style: StrokeStyle(lineWidth: 1))
                             .foregroundColor(Colors.tintColorPrimary)
                     )
                 
-                SecureField("Password", text: $vm.password)
-                    .textContentType(.password)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .padding(12)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(style: StrokeStyle(lineWidth: 1)
-                                   )
+                HStack {
+                    if showPassword {
+                        TextField("Password", text: $vm.password)
+                            .textContentType(.password)
+                    } else {
+                        SecureField("Password", text: $vm.password)
+                            .textContentType(.password)
+                    }
+                    
+                    Button(action: {
+                        showPassword.toggle()
+                    }) {
+                        Image(systemName: showPassword ? "eye.fill" : "eye.slash.fill")
                             .foregroundColor(Colors.tintColorPrimary)
-                    )
+                    }
+                }
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .padding(12)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(style: StrokeStyle(lineWidth: 1))
+                        .foregroundColor(Colors.tintColorPrimary)
+                )
             }
             .opacity(vm.isLoading ? 0.25 : 1)
             .overlay {
@@ -181,7 +191,7 @@ struct LoginView: View {
             HStack {
                 Toggle("", isOn: $vm.rememberMe)
                     .labelsHidden()
-                .tint(Colors.tintColorPrimary)
+                    .tint(Colors.tintColorPrimary)
                 Text("Remember Me")
                     .font(.roboto(size: 16, weight: .regular))
                 Spacer()
@@ -205,11 +215,15 @@ struct LoginView: View {
         .padding(.horizontal, 20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Colors.tintColorLight)
+        .preferredColorScheme(.light)
+        .colorScheme(.light)
     }
 }
 
 struct SignUpView: View {
     @StateObject var vm: AuthenticationViewModel
+    @State private var showPassword: Bool = false
+    @State private var showConfirmPassword: Bool = false
     
     var body: some View {
         VStack(spacing: 40) {
@@ -232,33 +246,59 @@ struct SignUpView: View {
                     .padding(12)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(style: StrokeStyle(lineWidth: 1)
-                                   )
+                            .stroke(style: StrokeStyle(lineWidth: 1))
                             .foregroundColor(Colors.tintColorPrimary)
                     )
                 
-                SecureField("Password", text: $vm.password)
-                    .textContentType(.newPassword)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .padding(12)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(style: StrokeStyle(lineWidth: 1)
-                                   )
+                HStack {
+                    if showPassword {
+                        TextField("Password", text: $vm.password)
+                            .textContentType(.newPassword)
+                    } else {
+                        SecureField("Password", text: $vm.password)
+                            .textContentType(.newPassword)
+                    }
+                    
+                    Button(action: {
+                        showPassword.toggle()
+                    }) {
+                        Image(systemName: showPassword ? "eye.fill" : "eye.slash.fill")
                             .foregroundColor(Colors.tintColorPrimary)
-                    )
-                SecureField("Confirm Password", text: $vm.passwordConfirm)
-                    .textContentType(.password)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .padding(12)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(style: StrokeStyle(lineWidth: 1)
-                                   )
+                    }
+                }
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .padding(12)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(style: StrokeStyle(lineWidth: 1))
+                        .foregroundColor(Colors.tintColorPrimary)
+                )
+
+                HStack {
+                    if showConfirmPassword {
+                        TextField("Confirm Password", text: $vm.passwordConfirm)
+                            .textContentType(.password)
+                    } else {
+                        SecureField("Confirm Password", text: $vm.passwordConfirm)
+                            .textContentType(.password)
+                    }
+                    
+                    Button(action: {
+                        showConfirmPassword.toggle()
+                    }) {
+                        Image(systemName: showConfirmPassword ? "eye.fill" : "eye.slash.fill")
                             .foregroundColor(Colors.tintColorPrimary)
-                    )
+                    }
+                }
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .padding(12)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(style: StrokeStyle(lineWidth: 1))
+                        .foregroundColor(Colors.tintColorPrimary)
+                )
             }
             .opacity(vm.isLoading ? 0.25 : 1)
             .overlay {
@@ -270,7 +310,7 @@ struct SignUpView: View {
             Button {
                 vm.createAccount(vm.email, vm.password)
             } label: {
-                Text("LOGIN")
+                Text("SIGN UP")
                     .font(.roboto(size: 16, weight: .bold))
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
@@ -285,6 +325,8 @@ struct SignUpView: View {
         .padding(.horizontal, 20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Colors.tintColorLight)
+        .preferredColorScheme(.light)
+        .colorScheme(.light)
     }
 }
 

@@ -25,6 +25,7 @@ struct MainView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .preferredColorScheme(.light)
+        .colorScheme(.light)
     }
     
     var view: some View {

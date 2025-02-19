@@ -54,6 +54,7 @@ struct HandHistoryView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Colors.tintColorLight)
+        .preferredColorScheme(.light)
     }
     
     var navigationBar: some View {

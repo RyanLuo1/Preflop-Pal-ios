@@ -825,6 +825,7 @@ struct HomeView: View {
         .frame(height: 40)
         .foregroundStyle(.white)
         .background(Colors.tintColorPrimary)
+        .preferredColorScheme(.light)
         .alert("Log Out", isPresented: $logoutIsPresented, actions: {
             Button {
                 vm.logout()
