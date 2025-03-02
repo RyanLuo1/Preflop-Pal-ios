@@ -1,5 +1,8 @@
 # Preflop Pal
 
+## App Store Link
+https://apps.apple.com/us/app/preflop-pal/id6742088219?platform=iphone
+
 ## Overview
 
 Preflop Pal is designed to introduce new players to correct preflop play in Texas Hold'em poker. This tool aims to make learning optimal preflop strategies easier by providing a simple, user-friendly interface, in contrast to modern solvers/charts which can be complex and difficult to read. Instead of relying on real-time solver calculations, Preflop Pal uses carefully curated premapped ranges to offer precise, 1:1 tailored guidance that is easy to understand and apply.
